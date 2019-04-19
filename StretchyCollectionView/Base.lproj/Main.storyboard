@@ -21,14 +21,14 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mqT-mP-hXq">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aKD-BQ-XIs">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aKD-BQ-XIs" customClass="STCollectionViewFlowLayout" customModule="StretchyCollectionView" customModuleProvider="target">
                                     <size key="itemSize" width="160" height="160"/>
                                     <size key="headerReferenceSize" width="50" height="250"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Xhn-bG-uw1">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="stCCell" id="Xhn-bG-uw1">
                                         <rect key="frame" x="10" y="260" width="160" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -37,9 +37,23 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="76K-lX-P3T">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="stCHeadCell" id="76K-lX-P3T" customClass="STCollectionReusableView" customModule="StretchyCollectionView" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img" translatesAutoresizingMaskIntoConstraints="NO" id="9Vn-EB-Rgk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="9Vn-EB-Rgk" secondAttribute="trailing" id="NG4-WE-nQx"/>
+                                        <constraint firstItem="9Vn-EB-Rgk" firstAttribute="top" secondItem="76K-lX-P3T" secondAttribute="top" id="QfS-0q-vSn"/>
+                                        <constraint firstAttribute="bottom" secondItem="9Vn-EB-Rgk" secondAttribute="bottom" id="c3x-ra-06F"/>
+                                        <constraint firstItem="9Vn-EB-Rgk" firstAttribute="leading" secondItem="76K-lX-P3T" secondAttribute="leading" id="tFd-aJ-RGT"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="imgView" destination="9Vn-EB-Rgk" id="RoR-RW-WAy"/>
+                                    </connections>
                                 </collectionReusableView>
                             </collectionView>
                         </subviews>
@@ -52,9 +66,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="stCollectionView" destination="mqT-mP-hXq" id="Tlu-bI-5jJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="img" width="2144" height="1206"/>
+    </resources>
 </document>

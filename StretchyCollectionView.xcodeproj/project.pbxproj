@@ -12,6 +12,8 @@
 		1889641F226A1B4100EC1CC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1889641D226A1B4100EC1CC5 /* Main.storyboard */; };
 		18896421226A1B4200EC1CC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18896420226A1B4200EC1CC5 /* Assets.xcassets */; };
 		18896424226A1B4200EC1CC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18896422226A1B4200EC1CC5 /* LaunchScreen.storyboard */; };
+		1889642C226A1C7D00EC1CC5 /* STCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889642B226A1C7D00EC1CC5 /* STCollectionReusableView.swift */; };
+		1889642E226A1C8D00EC1CC5 /* STCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889642D226A1C8D00EC1CC5 /* STCollectionViewFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		18896420226A1B4200EC1CC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18896423226A1B4200EC1CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18896425226A1B4200EC1CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1889642B226A1C7D00EC1CC5 /* STCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STCollectionReusableView.swift; sourceTree = "<group>"; };
+		1889642D226A1C8D00EC1CC5 /* STCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				18896420226A1B4200EC1CC5 /* Assets.xcassets */,
 				18896422226A1B4200EC1CC5 /* LaunchScreen.storyboard */,
 				18896425226A1B4200EC1CC5 /* Info.plist */,
+				1889642B226A1C7D00EC1CC5 /* STCollectionReusableView.swift */,
+				1889642D226A1C8D00EC1CC5 /* STCollectionViewFlowLayout.swift */,
 			);
 			path = StretchyCollectionView;
 			sourceTree = "<group>";
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1889642C226A1C7D00EC1CC5 /* STCollectionReusableView.swift in Sources */,
 				1889641C226A1B4100EC1CC5 /* ViewController.swift in Sources */,
+				1889642E226A1C8D00EC1CC5 /* STCollectionViewFlowLayout.swift in Sources */,
 				1889641A226A1B4100EC1CC5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
