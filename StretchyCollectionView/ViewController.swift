@@ -54,7 +54,6 @@ extension ViewController: UICollectionViewDataSource {
             headerView.imgView.image = #imageLiteral(resourceName: "img")
             return headerView
         default:
-            // 4
             assert(false, "Invalid element type")
         }
     }
